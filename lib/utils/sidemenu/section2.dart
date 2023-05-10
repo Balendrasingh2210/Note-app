@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/screens/archiveview.dart';
 
 import '../../colors.dart';
 
-Widget sectionTwo() {
+Widget sectionTwo(context) {
   return Container(
     // padding: EdgeInsets.all(5),
     margin: const EdgeInsets.only(right: 10),
@@ -15,7 +16,10 @@ Widget sectionTwo() {
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(50),
                       bottomRight: Radius.circular(50))))),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const Archive()));
+      },
       child: Container(
         padding: const EdgeInsets.all(5),
         child: Row(

@@ -34,14 +34,14 @@ class _SideMenuState extends State<SideMenu> {
                 color: white.withOpacity(0.3),
               ),
               sectionOne(),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              sectionTwo(),
-              SizedBox(
+              sectionTwo(context),
+              const SizedBox(
                 height: 5,
               ),
-              sectionThree(),
+              sectionThree(context),
             ],
           ),
         ),

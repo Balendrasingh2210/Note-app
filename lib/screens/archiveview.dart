@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/colors.dart';
 import 'package:notes_app/screens/noteview.dart';
-import 'package:notes_app/screens/searchpage.dart';
 import 'package:notes_app/screens/sidemenu.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-import 'createnoteview.dart';
-
-class Home extends StatefulWidget {
-  const Home({super.key});
+class Archive extends StatefulWidget {
+  const Archive({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Archive> createState() => _ArchiveState();
 }
 
-class _HomeState extends State<Home> {
+class _ArchiveState extends State<Archive> {
   String note = "Sunt officia qui cupidatat eu sint ex tempor ullamco.";
   String note1 =
       "Sunt officia qui cupidatat eu sint ex tempor ullamco.fu sint ex tempor ullamco.fulla dajukkk dhunask djhndnemdnfb dhfhd dhjcjsint ex tempor ullamco.fulla dajukkk dhunask djhndnemdnfb dhfhd dhjcjdsint ex tempor ullamco.fulla dajukkk dhunask djhndnemdnfb dhfhd dhjcjdsint ex tempor ullamco.fulla dajukkk dhunask djhndnemdnfb dhfhd dhjcjdsint ex tempor ullamco.fulla dajukkk dhunask djhndnemdnfb dhfhd dhjcjdsint ex tempor ullamco.fulla dajukkk dhunask djhndnemdnfb dhfhd dhjcjdsint ex tempor ullamco.fulla dajukkk dhunask djhndnemdnfb dhfhd dhjcjdsint ex tempor ullamco.fulla dajukkk dhunask djhndnemdnfb dhfhd dhjcjdlla dajukkk dhunask djhndnemdnfb dhfhd dhjcjd sint ex tempor ullamco.fulla dajukkk dhunask djhndnemdnfb dhfhd dhjcjd sint ex tempor ullamco.fulla dajukkk dhunask djhndnemdnfb dhfhd dhjcjd.";
@@ -22,17 +19,17 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const CreateNoteView()));
-        },
-        backgroundColor: cardColor,
-        child: const Icon(
-          Icons.add,
-          size: 45,
-        ),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     Navigator.push(context,
+      //         MaterialPageRoute(builder: (context) => const CreateNoteView()));
+      //   },
+      //   backgroundColor: cardColor,
+      //   child: const Icon(
+      //     Icons.add,
+      //     size: 45,
+      //   ),
+      // ),
       endDrawerEnableOpenDragGesture: true,
       key: _drawerkey,
       drawer: const SideMenu(),
@@ -75,29 +72,20 @@ class _HomeState extends State<Home> {
                           width: 10,
                         ),
                         // ignore: sized_box_for_whitespace
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const SearchView()));
-                          },
-                          // ignore: sized_box_for_whitespace
-                          child: Container(
-                            height: 55,
-                            width: 170,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Search your notes",
-                                  style: TextStyle(
-                                      color: white.withOpacity(0.5),
-                                      fontSize: 16),
-                                )
-                              ],
-                            ),
+                        Container(
+                          height: 55,
+                          width: 170,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Search your notes",
+                                style: TextStyle(
+                                    color: white.withOpacity(0.5),
+                                    fontSize: 16),
+                              )
+                            ],
                           ),
                         ),
                       ],

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/screens/setting.dart';
 
 import '../../colors.dart';
 
-Widget sectionThree() {
+Widget sectionThree(context) {
   return Container(
     // padding: EdgeInsets.all(5),
     margin: const EdgeInsets.only(right: 10),
@@ -15,7 +16,10 @@ Widget sectionThree() {
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(50),
                       bottomRight: Radius.circular(50))))),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const Setting()));
+      },
       child: Container(
         padding: const EdgeInsets.all(5),
         child: Row(
